@@ -7,8 +7,9 @@ import {
 import colors from "./colors";
 
 const options = {
-  baseFontSize: `20px`,
+  baseFontSize: `22px`,
   baseLineHeight: 1.35,
+  blockMarginBottom: 0.8,
   headerColor: `hsla(0,0%,0%,0.7)`,
   bodyColor: `hsla(0,0%,0%,0.8)`,
   scaleRatio: 3,
@@ -34,15 +35,15 @@ const options = {
       marginBottom: 0,
     },
     [TABLET_MEDIA_QUERY]: {
-      // Make baseFontSize on tablets 18px.
+      // Make baseFontSize on tablets and below 19px.
       html: {
-        fontSize: `${18 / 16 * 100}%`,
+        fontSize: `${19 / 16 * 100}%`,
       },
     },
     [MOBILE_MEDIA_QUERY]: {
-      // Make baseFontSize on mobile 15px.
+      // Make baseFontSize on mobile and below 17px.
       html: {
-        fontSize: `${15 / 16 * 100}%`,
+        fontSize: `${17 / 16 * 100}%`,
       },
     },
   }),

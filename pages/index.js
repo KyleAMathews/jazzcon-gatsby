@@ -28,16 +28,40 @@ class Index extends React.Component {
         />
         <Section theme="gray">
           <h2>Music. Food. Code.</h2>
-          <p css={{ ...scale(1 / 5), lineHeight: options.baseLineHeight }}>
+          <p
+            css={{
+              ...scale(1 / 5),
+              marginBottom: rhythm(1),
+              lineHeight: options.baseLineHeight,
+            }}
+          >
             Join us in New Orleans for a 3 day event, March 22-24, on Web & JavaScript Development! All tickets include workshop day, and there will be 4 concurrent tracks. Workshops and sessions include:
           </p>
-          <p css={{ ...scale(3 / 5), lineHeight: 1.25 }}>
+          <p
+            css={{
+              ...scale(2.5 / 5),
+              marginBottom: rhythm(1),
+              lineHeight: options.baseLineHeight - 0.1,
+            }}
+          >
             Angular, React, JavaScript, JS Frameworks, HTML5, CSS3, tools, techniques, and more!
           </p>
-          <p css={{ ...scale(1 / 5), lineHeight: options.baseLineHeight }}>
+          <p
+            css={{
+              ...scale(1 / 5),
+              marginBottom: rhythm(1),
+              lineHeight: options.baseLineHeight,
+            }}
+          >
             Brought to you by the organizers of another world-class conference, Connect.Tech, JazzCon.Tech will bring the energy and community spirit of our previous events to New Orleans for three days of learning and networking. Check out the speakers and presentations from our previous confs at the link above. We invite you to join us March 2017 for this unique experience!
           </p>
-          <p css={{ ...scale(1 / 5), lineHeight: options.baseLineHeight }}>
+          <p
+            css={{
+              ...scale(1 / 5),
+              marginBottom: rhythm(1),
+              lineHeight: options.baseLineHeight,
+            }}
+          >
             Regular price are available now, use code MFC2017 to get $50 off! Get the best possible price now before it goes up!
           </p>
           <Button>CLICK HERE TO REGISTER</Button>
@@ -185,10 +209,12 @@ class Index extends React.Component {
           <h2>Sponsors</h2>
           <br />
           <img css={{ width: 458, maxWidth: `100%` }} src={automatticImg} />
+          <br />
           <img
             css={{ width: 458, maxWidth: `100%`, background: `white` }}
             src={huiImg}
           />
+          <br />
           <img css={{ width: 458, maxWidth: `100%` }} src={witnolaImg} />
         </Section>
         <Section theme="gray">

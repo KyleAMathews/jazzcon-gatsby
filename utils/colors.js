@@ -1,11 +1,11 @@
 const colors = {
-  darkBlue: `#0093cf`,
-  oxfordBlue: `#2a3940`,
-  cornflowerBlue: `#3897f0`,
-  whiteSmoke: `hsla(100,100%,100%,0.94)`,
-  veryLightGrey: `hsla(100,100%,100%,0.8)`,
+  darkBlue: `#0093cf`, // button depressed
+  oxfordBlue: `#2a3940`, // button default
+  bondiBlue: `#0093ba`, // background blue
+  whiteSmoke: `#efefef`,
+  veryLightGrey: `#ccc`,
   white: `#fff`,
-  kournikova: `#fac552`,
+  kournikova: `#fac552`, // orangy/yellow accent color
 };
 
 export default colors;
