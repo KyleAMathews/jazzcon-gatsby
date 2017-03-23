@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import presets from "glamor-media-query-presets";
 
 import { rhythm } from "../utils/typography";
+import colors from "../utils/colors";
 
 class Button extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Button extends React.Component {
           textTransform: `uppercase`,
           borderRadius: `2px`,
           transition: `all .2s`,
-          backgroundColor: `#0093cf`,
+          backgroundColor: colors.darkBlue,
           color: `#fff`,
           padding: `${rhythm(1 / 3)} ${rhythm(1)}`,
           touchAction: `manipulation`,
@@ -27,7 +28,7 @@ class Button extends React.Component {
           verticalAlign: `middle`,
           whiteSpace: `inherit`,
           ":hover, :focus": {
-            backgroundColor: `#2a3940`,
+            backgroundColor: colors.oxfordBlue,
           },
           ":active": {
             boxShadow: `inset 0 3px 5px rgba(255,255,255,.125)`,

@@ -4,6 +4,7 @@ import presets from "glamor-media-query-presets";
 import Section from "../components/section";
 import Button from "../components/button";
 import { rhythm, scale, options } from "../utils/typography";
+import colors from "../utils/colors";
 
 // Sponsors
 import automatticImg from "../assets/automattic.png";
@@ -71,7 +72,9 @@ class Index extends React.Component {
               },
             }}
           >
-            <h2 css={{ borderBottomColor: `#efefef` }}>Join the band!</h2>
+            <h2 css={{ borderBottomColor: colors.whiteSmoke }}>
+              Join the band!
+            </h2>
             <p>CFP NOW CLOSED</p>
             <p>
               All tickets include access to a full day of workshops on March 22! Workshops include:
@@ -113,9 +116,11 @@ class Index extends React.Component {
           <h2>Schedule</h2>
         </Section>
         <Section theme="golden">
-          <h2 css={{ borderBottomColor: `#efefef` }}>Sessions & Workshops</h2>
+          <h2 css={{ borderBottomColor: colors.whiteSmoke }}>
+            Sessions & Workshops
+          </h2>
           <br />
-          <h3 css={{ borderBottomColor: `#efefef` }}>
+          <h3 css={{ borderBottomColor: colors.whiteSmoke }}>
             Workshops on Wednesday March 22 on first-come basis
           </h3>
         </Section>
@@ -154,7 +159,7 @@ class Index extends React.Component {
           </div>
         </Section>
         <Section theme="golden">
-          <h2 css={{ borderBottomColor: `#efefef` }}>Location</h2>
+          <h2 css={{ borderBottomColor: colors.whiteSmoke }}>Location</h2>
           <p>
             JazzCon.Tech will take place in the heart of historic New Orleans, within walking distance of the best food, music, and culture the city has to offer.
           </p>
@@ -195,10 +200,16 @@ class Index extends React.Component {
         </Section>
         <Section
           css={{
-            color: `#ccc`,
+            color: colors.veryLightGrey,
           }}
         >
-          <h4 css={{ borderBottom: `none`, paddingBottom: 0, color: `#ccc` }}>
+          <h4
+            css={{
+              borderBottom: `none`,
+              paddingBottom: 0,
+              color: colors.veryLightGrey,
+            }}
+          >
             JazzCon.Tech
           </h4>
           <p>FACEBOOK ICON|TWITTER ICON</p>

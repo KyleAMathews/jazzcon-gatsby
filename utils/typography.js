@@ -4,6 +4,8 @@ import {
   MOBILE_MEDIA_QUERY,
 } from "typography-breakpoint-constants";
 
+import colors from "./colors";
+
 const options = {
   baseFontSize: `20px`,
   baseLineHeight: 1.35,
@@ -22,11 +24,11 @@ const options = {
     "h1,h2,h3,h4,h5,h6": {
       display: `inline-block`,
       lineHeight: 1.1,
-      borderBottom: `${rhythm(1 / 4)} solid #fac552`,
+      borderBottom: `${rhythm(1 / 4)} solid ${colors.kournikova}`,
       paddingBottom: rhythm(1 / 8),
     },
     a: {
-      color: `#3897f0`,
+      color: colors.cornflowBlue,
     },
     "section div *:last-child": {
       marginBottom: 0,

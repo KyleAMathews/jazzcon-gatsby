@@ -1,16 +1,17 @@
 import React from "react";
 
 import { rhythm } from "../utils/typography";
+import colors from "../utils/colors";
 
 const sectionThemes = {
   gray: {
-    backgroundColor: `#efefef`,
+    backgroundColor: colors.whiteSmoke,
   },
   white: {
-    backgroundColor: `#fff`,
+    backgroundColor: colors.white,
   },
   golden: {
-    backgroundColor: `#fac552`,
+    backgroundColor: colors.kournikova,
   },
 };
 
