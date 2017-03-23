@@ -1,0 +1,45 @@
+{
+  "name": "gatsby-example-image-gallery",
+  "private": true,
+  "description": "Gatsby example site: image gallery",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-link": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-parser-json": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-parser-sharp": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-parser-yaml": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-plugin-glamor": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-plugin-manifest": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-plugin-offline": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-plugin-sharp": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-source-filesystem": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-typegen-filesystem": "1.0.0-alpha12-alpha.4575c38e",
+    "gatsby-typegen-sharp": "1.0.0-alpha12-alpha.4575c38e",
+    "glamor-media-query-presets": "^1.0.0",
+    "lodash": "^4.16.4",
+    "react-icons": "^2.2.3",
+    "react-typography": "^0.15.0",
+    "react-waypoint": "^5.2.0",
+    "request": "^2.79.0",
+    "slug": "^0.9.1",
+    "typeface-didact-gothic": "^0.0.22",
+    "typeface-space-mono": "^0.0.22",
+    "typeface-titillium-web": "^0.0.22",
+    "typography": "^0.15.0",
+    "typography-breakpoint-constants": "^0.14.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+  }
+}
