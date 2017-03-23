@@ -9,8 +9,8 @@ import colors from "./colors";
 const options = {
   baseFontSize: `20px`,
   baseLineHeight: 1.35,
-  headerColor: `hsla(0,0%,0%,0.8)`,
-  bodyColor: `hsla(0,0%,0%,0.7)`,
+  headerColor: `hsla(0,0%,0%,0.7)`,
+  bodyColor: `hsla(0,0%,0%,0.8)`,
   scaleRatio: 3,
   headerFontFamily: [`Chrysler`, `sans-serif`],
   bodyFontFamily: [`Didact Gothic`, `sans-serif`],
