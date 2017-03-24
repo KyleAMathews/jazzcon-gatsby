@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `JazzCon`,
   },
+  mapping: {
+    "Event.persons": "Person",
+    "Person.events": "Event",
+  },
   plugins: [
     /*
      * Gatsby's data processing layer begins with “source”
@@ -31,7 +35,7 @@ module.exports = {
     // extends these to create new “ImageSharp” nodes.
     `gatsby-parser-sharp`,
     // This plugin parses JSON file nodes.
-    `gatsby-parser-json`,
+    // `gatsby-parser-json`,
     `gatsby-typegen-filesystem`,
     // This plugin adds GraphQL fields to the ImageSharp
     // GraphQL type. With them you can resize images and

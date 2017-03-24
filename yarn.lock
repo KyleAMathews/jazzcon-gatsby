@@ -173,7 +173,7 @@ array.prototype.find@^2.0.1:
     define-properties "^1.1.2"
     es-abstract "^1.7.0"
 
-arrify@^1.0.0:
+arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
@@ -291,7 +291,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.18.2, babel-core@^6.24.0:
+babel-core@^6.0.0, babel-core@^6.18.2, babel-core@^6.24.0:
   version "6.24.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.24.0.tgz#8f36a0a77f5c155aed6f920b844d23ba56742a02"
   dependencies:
@@ -315,7 +315,7 @@ babel-core@^6.18.2, babel-core@^6.24.0:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-generator@^6.24.0:
+babel-generator@^6.18.0, babel-generator@^6.24.0:
   version "6.24.0"
   resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.24.0.tgz#eba270a8cc4ce6e09a61be43465d7c62c1f87c56"
   dependencies:
@@ -455,6 +455,14 @@ babel-helpers@^6.23.0:
     babel-runtime "^6.22.0"
     babel-template "^6.23.0"
 
+babel-jest@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-19.0.0.tgz#59323ced99a3a84d359da219ca881074ffc6ce3f"
+  dependencies:
+    babel-core "^6.0.0"
+    babel-plugin-istanbul "^4.0.0"
+    babel-preset-jest "^19.0.0"
+
 babel-loader@^6.2.7:
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-6.4.1.tgz#0b34112d5b0748a8dcdbf51acf6f9bd42d50b8ca"
@@ -483,6 +491,18 @@ babel-plugin-check-es2015-constants@^6.22.0:
 babel-plugin-glamor@^3.0.0-1:
   version "3.0.0-1"
   resolved "https://registry.yarnpkg.com/babel-plugin-glamor/-/babel-plugin-glamor-3.0.0-1.tgz#a0643e9683b34c00629e923ac0d4555e5ccd0975"
+
+babel-plugin-istanbul@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-4.1.1.tgz#c12de0fc6fe42adfb16be56f1ad11e4a9782eca9"
+  dependencies:
+    find-up "^2.1.0"
+    istanbul-lib-instrument "^1.6.2"
+    test-exclude "^4.0.3"
+
+babel-plugin-jest-hoist@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-19.0.0.tgz#4ae2a04ea612a6e73651f3fde52c178991304bea"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -912,6 +932,12 @@ babel-preset-flow@^6.23.0:
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
+babel-preset-jest@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-19.0.0.tgz#22d67201d02324a195811288eb38294bb3cac396"
+  dependencies:
+    babel-plugin-jest-hoist "^19.0.0"
+
 babel-preset-react@^6.11.1:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.23.0.tgz#eb7cee4de98a3f94502c28565332da9819455195"
@@ -977,7 +1003,7 @@ babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.6.1, babel-runtim
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-template@^6.22.0, babel-template@^6.23.0, babel-template@^6.7.0, babel-template@^6.9.0:
+babel-template@^6.16.0, babel-template@^6.22.0, babel-template@^6.23.0, babel-template@^6.7.0, babel-template@^6.9.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.23.0.tgz#04d4f270adbb3aa704a8143ae26faa529238e638"
   dependencies:
@@ -1001,7 +1027,7 @@ babel-traverse@^6.18.0, babel-traverse@^6.22.0, babel-traverse@^6.23.0, babel-tr
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23.0:
+babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.23.0.tgz#bb17179d7538bad38cd0c9e115d340f77e7e9acf"
   dependencies:
@@ -1010,7 +1036,7 @@ babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23.0:
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babylon@^6.11.0, babylon@^6.13.1, babylon@^6.15.0:
+babylon@^6.11.0, babylon@^6.13.0, babylon@^6.13.1, babylon@^6.15.0:
   version "6.16.1"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.16.1.tgz#30c5a22f481978a9e7f8cdfdf496b11d94b404d3"
 
@@ -1926,6 +1952,12 @@ css-selector-tokenizer@^0.7.0:
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
 
+css-vendor@^0.3.1:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-0.3.8.tgz#6421cfd3034ce664fe7673972fd0119fc28941fa"
+  dependencies:
+    is-in-browser "^1.0.2"
+
 css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
@@ -2021,7 +2053,7 @@ debug@2.6.1:
   dependencies:
     ms "0.7.2"
 
-debug@2.6.3, debug@^2.1.1, debug@^2.2.0, debug@^2.6.0:
+debug@2.6.3, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
   dependencies:
@@ -2767,6 +2799,12 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
+find-up@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
+  dependencies:
+    locate-path "^2.0.0"
+
 find-versions@^1.0.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/find-versions/-/find-versions-1.2.1.tgz#cbde9f12e38575a0af1be1b9a2c5d5fd8f186b62"
@@ -2913,35 +2951,35 @@ function-bind@^1.0.2, function-bind@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
-gatsby-link@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.0.0-alpha12-alpha.4575c38e.tgz#77efc1f0772e41791cd2ef7cdec74efd3183e7c3"
+gatsby-link@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.0.0-alpha12-alpha.e1f27e45.tgz#b44574e2c3b30d39261e0f247a468adca42f963d"
 
-gatsby-parser-json@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-parser-json/-/gatsby-parser-json-1.0.0-alpha12-alpha.4575c38e.tgz#a7bcd0733b8f44b57180f4183014c8eec0d1701d"
+gatsby-parser-json@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-parser-json/-/gatsby-parser-json-1.0.0-alpha12-alpha.e1f27e45.tgz#b68b85d3c03705a81e497a95baae479ee6c42103"
   dependencies:
     bluebird "^3.4.6"
     unist-util-select "^1.5.0"
 
-gatsby-parser-sharp@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-parser-sharp/-/gatsby-parser-sharp-1.0.0-alpha12-alpha.4575c38e.tgz#89258e5e4203033d1d3bfdc3ee88d0ae5f76c2e9"
+gatsby-parser-sharp@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-parser-sharp/-/gatsby-parser-sharp-1.0.0-alpha12-alpha.e1f27e45.tgz#ab716f9b0d9ac72a3424d77b4a280e8302fe4047"
   dependencies:
     bluebird "^3.4.6"
     unist-util-select "^1.5.0"
 
-gatsby-parser-yaml@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-parser-yaml/-/gatsby-parser-yaml-1.0.0-alpha12-alpha.4575c38e.tgz#fde43367e02e59f33ce978fc4f3668b1f85139a4"
+gatsby-parser-yaml@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-parser-yaml/-/gatsby-parser-yaml-1.0.0-alpha12-alpha.e1f27e45.tgz#cd8d0c827f957915e2c4e14c67c3d9b1ec80c2ee"
   dependencies:
     bluebird "^3.4.6"
     js-yaml "3.7.0"
     unist-util-select "^1.5.0"
 
-gatsby-plugin-glamor@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-glamor/-/gatsby-plugin-glamor-1.0.0-alpha12-alpha.4575c38e.tgz#ebe6fa5831f0713c1f6679928173192d45e22739"
+gatsby-plugin-glamor@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-glamor/-/gatsby-plugin-glamor-1.0.0-alpha12-alpha.e1f27e45.tgz#31bb478e7c2204375e6caba3204c60d81cc28181"
   dependencies:
     babel-plugin-glamor "^3.0.0-1"
     glamor next
@@ -2949,21 +2987,21 @@ gatsby-plugin-glamor@1.0.0-alpha12-alpha.4575c38e:
     glamor-react "^3.0.0-1"
     glamor-server next
 
-gatsby-plugin-manifest@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.0-alpha12-alpha.4575c38e.tgz#44b51e26f773cbbed35b7b01ff1b25bcc263d146"
+gatsby-plugin-manifest@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.0-alpha12-alpha.e1f27e45.tgz#0cb51067ac6af13d65f9c7cd8db2cafcdc68b88f"
   dependencies:
     bluebird "^3.4.7"
 
-gatsby-plugin-offline@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.0-alpha12-alpha.4575c38e.tgz#aa165843c971533710de5338864cc702e4f8a466"
+gatsby-plugin-offline@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.0-alpha12-alpha.e1f27e45.tgz#f2813682a1b98a4b62ae3f86311136f63d325396"
   dependencies:
     sw-precache "^5.0.0"
 
-gatsby-plugin-sharp@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.0.0-alpha12-alpha.4575c38e.tgz#9d6a1b8961f890c369cc1a6ff458adb7effd95fa"
+gatsby-plugin-sharp@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.0.0-alpha12-alpha.e1f27e45.tgz#902eca0ea47f7c19cbf282b68c707d44623a037f"
   dependencies:
     async "^2.1.4"
     bluebird "^3.4.7"
@@ -2976,9 +3014,9 @@ gatsby-plugin-sharp@1.0.0-alpha12-alpha.4575c38e:
     queue "^4.0.1"
     sharp "^0.17.1"
 
-gatsby-source-filesystem@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.0.0-alpha12-alpha.4575c38e.tgz#c571bfb7ffb068a964f189dc460ac7aeed473d98"
+gatsby-source-filesystem@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.0.0-alpha12-alpha.e1f27e45.tgz#41e38892d6c3619ada859cfb897935e5a8bff513"
   dependencies:
     async "^2.1.2"
     babel-cli "^6.18.0"
@@ -2997,24 +3035,24 @@ gatsby-source-filesystem@1.0.0-alpha12-alpha.4575c38e:
     slash "^1.0.0"
     unist-builder "^1.0.2"
 
-gatsby-typegen-filesystem@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-typegen-filesystem/-/gatsby-typegen-filesystem-1.0.0-alpha12-alpha.4575c38e.tgz#b4534a0495d2380971797256f1d2ef17b515020a"
+gatsby-typegen-filesystem@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-typegen-filesystem/-/gatsby-typegen-filesystem-1.0.0-alpha12-alpha.e1f27e45.tgz#d3208ed85cd526a3306d84a0b817fda0d4182828"
   dependencies:
     unist-util-select "^1.5.0"
 
-gatsby-typegen-sharp@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby-typegen-sharp/-/gatsby-typegen-sharp-1.0.0-alpha12-alpha.4575c38e.tgz#dd10e5e63dd4dea2ebc1debeb8bec63654b23a26"
+gatsby-typegen-sharp@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby-typegen-sharp/-/gatsby-typegen-sharp-1.0.0-alpha12-alpha.e1f27e45.tgz#4dd7fddeb2cc3ce754e1209ae68ed0c6aa5abb03"
   dependencies:
     graphql "^0.8.2"
     image-size "^0.5.1"
     lodash "^4.17.2"
     sharp "^0.17.0"
 
-gatsby@1.0.0-alpha12-alpha.4575c38e:
-  version "1.0.0-alpha12-alpha.4575c38e"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.0.0-alpha12-alpha.4575c38e.tgz#2835b7d489dae98d37a4d466de6f88ab0cab82d6"
+gatsby@1.0.0-alpha12-alpha.e1f27e45:
+  version "1.0.0-alpha12-alpha.e1f27e45"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.0.0-alpha12-alpha.e1f27e45.tgz#6025db5fed369429e43660699e221932dd00e0ff"
   dependencies:
     async "^2.1.2"
     babel-core "^6.18.2"
@@ -3051,7 +3089,7 @@ gatsby@1.0.0-alpha12-alpha.4575c38e:
     glob "^7.1.0"
     graphql "^0.8.2"
     graphql-relay "^0.4.3"
-    graphql-skip-limit "^1.0.0-alpha12-alpha.4575c38e"
+    graphql-skip-limit "^1.0.0-alpha12-alpha.e1f27e45"
     graphql-union-input-type "^0.2.1"
     gray-matter "^2.1.0"
     hapi "^8.5.1"
@@ -3359,7 +3397,7 @@ graphql-relay@^0.4.3, graphql-relay@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.4.4.tgz#876a654445b6af4539f81cb9befd5cd7ead129dd"
 
-graphql-skip-limit@^1.0.0-alpha12-alpha.4575c38e:
+graphql-skip-limit@^1.0.0-alpha12-alpha.e1f27e45:
   version "1.0.0-alpha12-alpha.faff3fa9"
   resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-1.0.0-alpha12-alpha.faff3fa9.tgz#bcc4436d70c1e61807496e4084367bcb2c5c84ea"
 
@@ -3942,6 +3980,10 @@ is-hexadecimal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-hexadecimal/-/is-hexadecimal-1.0.0.tgz#5c459771d2af9a2e3952781fd54fcb1bcfe4113c"
 
+is-in-browser@^1.0.2:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/is-in-browser/-/is-in-browser-1.1.3.tgz#56ff4db683a078c6082eb95dad7dc62e1d04f835"
+
 is-natural-number@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/is-natural-number/-/is-natural-number-2.1.1.tgz#7d4c5728377ef386c3e194a9911bf57c6dc335e7"
@@ -4106,6 +4148,22 @@ isomorphic-fetch@^2.1.1:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+istanbul-lib-coverage@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-1.0.1.tgz#f263efb519c051c5f1f3343034fc40e7b43ff212"
+
+istanbul-lib-instrument@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-1.6.2.tgz#dac644f358f51efd6113536d7070959a0111f73b"
+  dependencies:
+    babel-generator "^6.18.0"
+    babel-template "^6.16.0"
+    babel-traverse "^6.18.0"
+    babel-types "^6.18.0"
+    babylon "^6.13.0"
+    istanbul-lib-coverage "^1.0.0"
+    semver "^5.3.0"
 
 items@1.x.x, items@^1.1.x:
   version "1.1.1"
@@ -4415,6 +4473,13 @@ loader-utils@^1.0.2:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
+locate-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
+  dependencies:
+    p-locate "^2.0.0"
+    path-exists "^3.0.0"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -4470,6 +4535,12 @@ lodash.bind@^4.1.4:
 lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+
+lodash.debounce@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-3.1.1.tgz#812211c378a94cc29d5aa4e3346cf0bfce3a7df5"
+  dependencies:
+    lodash._getnative "^3.0.0"
 
 lodash.defaults@^4.0.1, lodash.defaults@^4.2.0:
   version "4.2.0"
@@ -4614,6 +4685,12 @@ lodash.templatesettings@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.1.0.tgz#2b4d4e95ba440d915ff08bc899e4553666713316"
   dependencies:
     lodash._reinterpolate "~3.0.0"
+
+lodash.throttle@^3.0.3:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-3.0.4.tgz#bc4f471fb328e4d6fdc6df2b3d3caf113f0f89c9"
+  dependencies:
+    lodash.debounce "^3.0.0"
 
 lodash.uniq@^4.3.0:
   version "4.5.0"
@@ -5302,6 +5379,16 @@ output-file-sync@^1.1.0:
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
+
+p-limit@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.1.0.tgz#b07ff2d9a5d88bec806035895a2bab66a27988bc"
+
+p-locate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
+  dependencies:
+    p-limit "^1.1.0"
 
 package-json@^2.0.0:
   version "2.4.0"
@@ -6230,6 +6317,15 @@ react-icons@^2.2.3:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.3.tgz#3b4847923065ecb09f8ba7f7e422112de0195196"
   dependencies:
     react-icon-base "2.0.4"
+
+react-popover@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/react-popover/-/react-popover-0.4.7.tgz#e74cc6a9f6974add2258fa80159fb900bc28a9dd"
+  dependencies:
+    babel-jest "^19.0.0"
+    css-vendor "^0.3.1"
+    debug "^2.1.3"
+    lodash.throttle "^3.0.3"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -7311,6 +7407,16 @@ tempfile@^1.0.0:
   dependencies:
     os-tmpdir "^1.0.0"
     uuid "^2.0.1"
+
+test-exclude@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-4.0.3.tgz#86a13ce3effcc60e6c90403cf31a27a60ac6c4e7"
+  dependencies:
+    arrify "^1.0.1"
+    micromatch "^2.3.11"
+    object-assign "^4.1.0"
+    read-pkg-up "^1.0.1"
+    require-main-filename "^1.0.1"
 
 through2-filter@^2.0.0:
   version "2.0.0"

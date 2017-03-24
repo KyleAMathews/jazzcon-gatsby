@@ -2,8 +2,9 @@ import React from "react";
 import Link from "gatsby-link";
 import presets from "glamor-media-query-presets";
 
-import { rhythm } from "../utils/typography";
+import { rhythm, options } from "../utils/typography";
 import colors from "../utils/colors";
+console.log("options", options);
 
 class Button extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class Button extends React.Component {
           padding: `${rhythm(1 / 3)} ${rhythm(1)}`,
           touchAction: `manipulation`,
           outline: 0,
+          marginBottom: options.borderMarginBottom,
           lineHeight: 1.3,
           cursor: `pointer`,
           textAlign: `center`,

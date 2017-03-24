@@ -2,7 +2,7 @@ import React from "react";
 import DocumentTitle from "react-document-title";
 
 import { TypographyStyle } from "react-typography";
-import typography from "./utils/typography";
+// import typography from "./utils/typography";
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
@@ -37,7 +37,6 @@ module.exports = React.createClass({
             content="width=device-width, initial-scale=1.0"
           />
           <title>JazzCon</title>
-          <TypographyStyle typography={typography} />
           {css}
         </head>
         <body>

@@ -1,10 +1,13 @@
 import React from "react";
 import presets from "glamor-media-query-presets";
+import FacebookIcon from "react-icons/lib/fa/facebook-square";
+import TwitterIcon from "react-icons/lib/fa/twitter-square";
 
+import Presenter from "../components/presenter";
 import Section from "../components/section";
 import Button from "../components/button";
 import { rhythm, scale, options } from "../utils/typography";
-import colors from "../utils/colors";
+// import colors from "../utils/colors";
 
 // Sponsors
 import automatticImg from "../assets/automattic.png";
@@ -14,12 +17,14 @@ import witnolaImg from "../assets/witnola.png";
 class Index extends React.Component {
   render() {
     console.log(this.props);
+    // Pull responsive images off props.
     const topImage = this.props.data.topImage.children[0].responsiveSizes;
     const bandImg = this.props.data.bandImg.children[0].responsiveSizes;
     const jazzImg = this.props.data.jazzImg.children[0].responsiveSizes;
     const mapImg = this.props.data.mapImg.children[0].responsiveSizes;
+
     return (
-      <div css={{ padding: rhythm(1 / 4) }}>
+      <div>
         <img
           css={{ margin: 0, verticalAlign: `bottom` }}
           src={topImage.src}
@@ -28,40 +33,16 @@ class Index extends React.Component {
         />
         <Section theme="gray">
           <h2>Music. Food. Code.</h2>
-          <p
-            css={{
-              ...scale(1 / 5),
-              marginBottom: rhythm(1),
-              lineHeight: options.baseLineHeight,
-            }}
-          >
+          <p>
             Join us in New Orleans for a 3 day event, March 22-24, on Web & JavaScript Development! All tickets include workshop day, and there will be 4 concurrent tracks. Workshops and sessions include:
           </p>
-          <p
-            css={{
-              ...scale(2.5 / 5),
-              marginBottom: rhythm(1),
-              lineHeight: options.baseLineHeight - 0.1,
-            }}
-          >
+          <p>
             Angular, React, JavaScript, JS Frameworks, HTML5, CSS3, tools, techniques, and more!
           </p>
-          <p
-            css={{
-              ...scale(1 / 5),
-              marginBottom: rhythm(1),
-              lineHeight: options.baseLineHeight,
-            }}
-          >
+          <p>
             Brought to you by the organizers of another world-class conference, Connect.Tech, JazzCon.Tech will bring the energy and community spirit of our previous events to New Orleans for three days of learning and networking. Check out the speakers and presentations from our previous confs at the link above. We invite you to join us March 2017 for this unique experience!
           </p>
-          <p
-            css={{
-              ...scale(1 / 5),
-              marginBottom: rhythm(1),
-              lineHeight: options.baseLineHeight,
-            }}
-          >
+          <p>
             Regular price are available now, use code MFC2017 to get $50 off! Get the best possible price now before it goes up!
           </p>
           <Button>CLICK HERE TO REGISTER</Button>
@@ -78,7 +59,6 @@ class Index extends React.Component {
               width: `100%`,
               [presets.Tablet]: {
                 float: `left`,
-                marginTop: rhythm(1 / 4),
                 paddingRight: rhythm(2),
                 width: `60%`,
               },
@@ -96,7 +76,7 @@ class Index extends React.Component {
               },
             }}
           >
-            <h2 css={{ borderBottomColor: colors.whiteSmoke }}>
+            <h2>
               Join the band!
             </h2>
             <p>CFP NOW CLOSED</p>
@@ -140,13 +120,17 @@ class Index extends React.Component {
           <h2>Schedule</h2>
         </Section>
         <Section theme="golden">
-          <h2 css={{ borderBottomColor: colors.whiteSmoke }}>
+          <h2>
             Sessions & Workshops
           </h2>
           <br />
-          <h3 css={{ borderBottomColor: colors.whiteSmoke }}>
+          <h3>
             Workshops on Wednesday March 22 on first-come basis
           </h3>
+          {this.props.data.allPerson.edges.map(person => {
+            console.log(person);
+            return <Presenter person={person} />;
+          })}
         </Section>
         <Section theme="gray">
           <img
@@ -155,8 +139,7 @@ class Index extends React.Component {
               width: `100%`,
               [presets.Tablet]: {
                 float: `left`,
-                marginTop: rhythm(1 / 4),
-                paddingRight: rhythm(2),
+                // paddingRight: rhythm(2),
                 width: `60%`,
               },
             }}
@@ -183,20 +166,20 @@ class Index extends React.Component {
           </div>
         </Section>
         <Section theme="golden">
-          <h2 css={{ borderBottomColor: colors.whiteSmoke }}>Location</h2>
+          <h2>Location</h2>
           <p>
             JazzCon.Tech will take place in the heart of historic New Orleans, within walking distance of the best food, music, and culture the city has to offer.
           </p>
           <p>
             We have a special rate at the conference hotel: the New Orleans Downtown Marriott at the Convention Center
           </p>
-          <Button>
+          <button>
             CLICK HERE TO GET GREATLY REDUCED CONFERENCE-ONLY RATES!
-          </Button>
+          </button>
           <img
             css={{
               marginBottom: 0,
-              marginTop: rhythm(1),
+              // marginTop: rhythm(1),
               verticalAlign: `bottom`,
               width: `100%`,
             }}
@@ -222,23 +205,23 @@ class Index extends React.Component {
           <p>
             JazzCon.Tech is dedicated to providing an outstanding conference experience for all attendees, speakers, sponsors, volunteers and organizers (JazzCon.Tech participants) regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, financial status, hair color (or hair amount), platform preference, or text editor of choice. We do not tolerate harassment of JazzCon.Tech participants in any form. Please treat your fellow JazzCon.Tech participants with respect, regardless of the context you’re interacting with them.
           </p>
-          <Button to="/code-of-conduct/">SEE COMPLETE CODE OF CONDUCT</Button>
+          <button to="/code-of-conduct/">SEE COMPLETE CODE OF CONDUCT</button>
         </Section>
         <Section
           css={{
-            color: colors.veryLightGrey,
+            // color: colors.veryLightGrey,
           }}
         >
           <h4
             css={{
               borderBottom: `none`,
               paddingBottom: 0,
-              color: colors.veryLightGrey,
+              // color: colors.veryLightGrey,
             }}
           >
             JazzCon.Tech
           </h4>
-          <p>FACEBOOK ICON|TWITTER ICON</p>
+          <p><FacebookIcon />|<TwitterIcon /></p>
           <p>
             <small>Copyright {new Date().getFullYear()} JazzCon.Tech</small>
           </p>
@@ -253,6 +236,17 @@ export default Index;
 
 export const pageQuery = `
 {
+  allPerson {
+    edges {
+      node {
+        avatar_path
+        full_public_name
+        events {
+          title
+        }
+      }
+    }
+  }
   topImage: file(relativePath: {eq: "jazzcon_logo_background3.png"}) {
     children {
       ...on ImageSharp {
